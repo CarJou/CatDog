@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 const Listado = (props)=>{
 //animales se vincula con server del back
   const [ animales, setAnimales ]= useState([])
- 
+
   const [showAnimalEditorModal, setShowAnimalEditorModal] = useState(false);
 
   const[ selectedAnimal, setSelectedAnimal ]= useState(null);
@@ -18,8 +18,6 @@ const Listado = (props)=>{
       setSelectedAnimal(null);
     setShowAnimalEditorModal(false)
   }
-
-  
 
 const onShowAnimalEditorModal = ()=>{
     setSelectedAnimal(null);
@@ -45,17 +43,16 @@ const handleChangeFavStatus = (isFav, aniId, userId)=>{
         alert('Agregar favorito')
     }
 }
- 
+
 
 const cargarListado = ()=>{
 
     let endpoint = 'animales';
- 
+
     if ( props.user && props.type === 'mispublicaciones' ){
       endpoint = 'animales/user/' + props.user.id;
   }
-  
-   
+
         fetch(`http://localhost:8888/${endpoint}`).then(
             response => response.json()
         ).then(
@@ -80,7 +77,7 @@ const handleEditClick = (idAnimal)=>{
 
 
 const handleDeleteClick = (idAnimal) =>{
-        
+
     Swal.fire({
         title: '¿Seguro que quieres eliminar esta publicación?',
         icon: 'question',
@@ -89,7 +86,7 @@ const handleDeleteClick = (idAnimal) =>{
         cancelButtonText: 'Cancelar'
     }).then( result =>{
         if ( result.value ){
-            
+
             fetch(`http://localhost:8888/animales/${idAnimal}`,
                 {
                     method: 'DELETE',
@@ -130,9 +127,7 @@ const handleDeleteClick = (idAnimal) =>{
   <NavBarMisPublicaciones handleShowAnimalEditorModal={onShowAnimalEditorModal}/>
   }
 
-
         <Row className="m-3">
-            
 
         {
             animales.map( animal =>{
@@ -153,7 +148,6 @@ const handleDeleteClick = (idAnimal) =>{
             })
         }
 
-           
 
         </Row>
 

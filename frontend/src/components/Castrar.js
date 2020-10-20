@@ -4,10 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel';
 
 export default()=>
-<>  
-     
-    
-
+<> 
 <h1 className="text-center p-3"><strong>¿Por qué es importante castrar?</strong></h1>
 
   <Container >
@@ -40,7 +37,7 @@ Evita las infecciones uterinas (piómetras) y los quistes ováricos, además de 
 
 
 <ul className="text-left ">
-   
+
 <li> Elimina el deseo sexual del animal, por lo que dejará de montar a otros animales o personas y no se mostrará ansioso y frustrado cuando detecten a una hembra en celo, evitando también en muchos casos las ganas de escapar y deambular fuera de casa, mejorando en definitiva la calidad de vida de nuestro animal.</li>
 
 <li>Se reduce o elimina la agresividad hacia otros machos y, especialmente en el caso de los gatos, el marcar con orina la casa.</li>
@@ -53,7 +50,7 @@ Evita las infecciones uterinas (piómetras) y los quistes ováricos, además de 
 <h2 className="text-center p-3" ><strong>Ventajas para usted:</strong></h2>
 
 <ul className="text-left">
-   
+
 <li>Evitara crías no deseadas, mordeduras, peleas, fugas, maullidos nocturnos, rociado de orina, problemas con los vecinos.</li>
 <li>Sus animales serán más sanos, vivirán más años y serán más guardianes.</li>
 
@@ -61,7 +58,7 @@ Evita las infecciones uterinas (piómetras) y los quistes ováricos, además de 
 
 <h2 className="text-center p-3" ><strong>Ventajas para la sociedad:</strong></h2>
 <ul className="text-left">
-   
+
 <li>Menos cantidad de animales en la vía pública.</li>
 <li>Menos animales abandonados por lo tanto menos maltrato y sufrimiento.</li>
 </ul>

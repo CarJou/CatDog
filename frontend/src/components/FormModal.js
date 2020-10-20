@@ -85,24 +85,23 @@ const handleSend = (props)=>{
 
 
 return(
-<>  
+<>
    <Modal show={props.show} onHide={props.handleHide}>
    
 <Modal.Header closeButton>
        <Modal.Title>Formulario de contacto</Modal.Title>
 </Modal.Header>
-    
+
     <Modal.Body>
     <Form>
         <Form.Group>
-           
+
             <Form.Label>Nombre y apellido</Form.Label>
             <Form.Control type="text"
                            value={formName}
                            onChange={handleFormNameChange} />
             </Form.Group>
-        
-        
+
         <Form.Group>
             <Form.Label>Edad</Form.Label>
             <Form.Control type="number"
@@ -140,7 +139,7 @@ return(
                           onChange={handleFormMailChange}/>
         </Form.Group>
 
-        
+
 
         <Form.Group>
             <Form.Label>Celular</Form.Label>
@@ -168,8 +167,6 @@ return(
                            />
         </Form.Group>
 
-         
-
 
 </Modal.Body>
 
@@ -182,10 +179,10 @@ return(
              onClick={handleSend}>
                  Enviar
          </Button>
-          
+
           </Modal.Footer>
 </Modal>
-    
+
     </>
 
 )}

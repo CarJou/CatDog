@@ -28,73 +28,51 @@ const NavigationBar = (props) => {
         setShowLoginModal(true);
     }
 
-
-  
-
   return(
 
-    <> 
+    <>
 
     <Navbar  sticky = "top"  style={ {backgroundColor : "#edc0ed" } } expand="lg" >
 
 
-  
       <Link to={"/"} className="navbar-brand">
       <img style={ {height : '3rem', marginRight : '0.8rem'} } src={logo}></img>
       <Navbar.Text><strong>CatDog</strong></Navbar.Text>
-  
+
 </Link>
 
 
-
-     
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
   <Navbar.Collapse id="basic-navbar-nav">
 
    <Nav className="ml-auto">
-      
-   
+
    { !props.user 
                             ?
-                                <Button 
-                                    variant="primary"
-                                    onClick={ handleShowLoginModal }
+         <Button
+               variant="primary"
+              onClick={ handleShowLoginModal }>
 
-                                
-                                > 
-                                <FontAwesomeIcon  icon={faUserCircle} pull = " left "/>
-                                    Iniciar sesión
-                                </Button>
+      <FontAwesomeIcon  icon={faUserCircle} pull = " left "/>
+              Iniciar sesión
+     </Button>
                             :
-                                <> <Link to="/favoritos" className="nav-link">
-                                      Favoritos
-                                       </Link>
+     <>
+      <Link to="/favoritos" className="nav-link">
+            Favoritos
+      </Link>
+  <Link to="/mispublicaciones" className="nav-link">Mis publicaciones</Link>
 
-                                       
-                                   <Link to="/mispublicaciones" className="nav-link">
-                                       Mis publicaciones
-                                       </Link>
-                                         
+      <NavDropdown alignRight title={props.user.nombre} >
+              <NavDropdown.Item>Mi cuenta</NavDropdown.Item>
+            <NavDropdown.Divider />
 
-                                   
-                                       <NavDropdown alignRight title={props.user.nombre} >
-                                        
-
-
-                                        <NavDropdown.Item>Mi cuenta</NavDropdown.Item>
-                                         <NavDropdown.Divider />
-
-
-                                        
-
-
-                                    
- 
-                                        <NavDropdown.Item onClick={props.handleLogout}>
-                                        <FontAwesomeIcon  icon={faSignOutAlt} pull = " left "/>
-                                            Cerrar sesión</NavDropdown.Item>
-                                    </NavDropdown> 
+    <NavDropdown.Item onClick={props.handleLogout}>
+                   <FontAwesomeIcon  icon={faSignOutAlt} pull = " left "/>
+                    Cerrar sesión</NavDropdown.Item>
+                </NavDropdown>
+                
                                 </>
                         }
 

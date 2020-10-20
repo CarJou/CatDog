@@ -6,9 +6,9 @@ import Form from 'react-bootstrap/Form';
 
 //export default (props) => {
     const LoginModal = (props) => {
-        
+
         const handleLoginClick = ()=>{
-            
+
             let url = 'http://localhost:8888/auth';
 
             let params = {
@@ -30,16 +30,12 @@ import Form from 'react-bootstrap/Form';
 
                     props.handleLoginSuccess(data.loggedUser);
                     props.handleHide();
-                    
                 }else{
                     alert(data.message);
                 }
              });
 
         }
-       
-
-        
 
         const [nombreUsuario, setNombreUsuario] = useState('');
         const [password, setPassword] = useState('');
@@ -53,14 +49,14 @@ import Form from 'react-bootstrap/Form';
         }
 
         return(
-           
+
             <Modal show={props.show} onHide={ props.handleHide }>
                 <Modal.Header closeButton>
                     <Modal.Title>Iniciar sesión</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body className="text-center">
-                    
+
                     <Form.Group>
                         <Form.Label>Nombre de usuario</Form.Label>
 
@@ -92,10 +88,10 @@ import Form from 'react-bootstrap/Form';
                             onClick={ handleLoginClick }
                     >
                         Aceptar
-                    </Button>       
-                </Modal.Footer>    
+                    </Button>
+                </Modal.Footer>
             </Modal>
-          
+
         )
 }
 export default LoginModal;

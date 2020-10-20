@@ -4,14 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel';
 
 export default()=>
-<>  
-    
-     
-
-
-
-
-  
+<>
  <h1 className="text-center p-3"><strong>Denuncia el maltrato</strong></h1> 
 <Container>
  <p className="text-center">
@@ -19,11 +12,10 @@ export default()=>
 No permitas que esa situación continúe sin hacer algo por él.</p>
  <p className="text-center">
 </p>
- 
- 
+
  <p className="text-center p-4"><strong>EN CASO DE MALTRATO Y CRUELDAD CONTRA ANIMALES
 DEBES TENER PRESENTE:</strong></p>
-<p className="text-center"> 
+<p className="text-center">
     <li>Es un delito penado por el Código Penal.</li>
 <li> Es un delito que tiene Acción Pública, es decir que puede ser denunciado por cualquier persona.</li>
 <li> El hecho se puede denunciar ante la Policía o fiscalía. </li></p>

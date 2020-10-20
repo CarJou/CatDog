@@ -8,19 +8,13 @@ import './styles/AnimalDetail.css';
 
 export default(props)=>{
 
-
-
-
   let { id } = useParams();
-
-
   let [animal, setAnimal] = useState(null);
   useEffect(
 
     ()=>{
 
      fetch('http://localhost:8888/animales/' + id ).then( response => response.json()
-     
      ).then( data => {
       setAnimal(data);
       console.log(data);
@@ -28,10 +22,7 @@ export default(props)=>{
      }, []
      )
      //para hacer dinamico ese ID importo useParams, lo exporto desde REACT router dom
-   
-
     const [ showFormModal, setShowFormModal ] = useState(false)
-    
     const handleHideFormModal =()=>{
       setShowFormModal(false);
     }
@@ -40,21 +31,16 @@ export default(props)=>{
     setShowFormModal(true);
   }
 
-
     return(
-
 
 animal &&
 <>
-
 
 <Row className="d-flex justify-content-center p-4">
 
   <Col md={4} className="d-flex justify-content-center ">
             <img src={animal.imagen} className="img-fluid"/>
-            
   </Col>
-
 
   <Col md={4} className="text-center p-3">
         <h1 className="Nombre">{animal.nombre}</h1>
@@ -62,22 +48,17 @@ animal &&
 
         <ButtonForm
     handleShowFormModal={onShowFormModal}/>
-    
-
   </Col>
 
-  
 </Row>
 
 <FormModal show={showFormModal} 
            handleHide={handleHideFormModal}
 
            id ={props.aniId}
-           
            user={props.userId}
-           
            />
 
- </>          
+ </>
   )
 }

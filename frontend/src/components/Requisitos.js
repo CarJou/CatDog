@@ -7,13 +7,7 @@ import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
 
 export default()=>
-<>  
-     
-     
-
-
-
-
+<>
 <h1 className="text-center p-3"><strong>Requisitos de adopción</strong></h1> 
 
   <Container >
